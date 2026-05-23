@@ -1,9 +1,8 @@
 # DevPulse
 
 ## Live Deployment
-- Live URL: **TBD**
+- Live URL: [**Live-Link**](https://dev-pulse-snowy-alpha.vercel.app/)
 
-> Add the public live URL here once the backend is deployed.
 
 ## Project Overview
 DevPulse is an internal issue and feature tracker built with Node.js, Express, TypeScript, and PostgreSQL. The API supports user authentication, role-based authorization, issue creation, retrieval, updates, and deletion.
