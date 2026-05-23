@@ -1,7 +1,7 @@
 export interface IUser {
     name: string;
     email: string;
-    role: 'contributor' | 'maintainer';
+    role?: 'contributor' | 'maintainer';
     password: string
 }
 

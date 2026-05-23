@@ -1,6 +1,6 @@
 import { StatusCodes } from "http-status-codes";
 import { pool } from "../../db"
-import type { IResUser, IUser } from "../../types"
+import type { IJwtPayload, IResUser, IUser } from "../../types"
 import { compareHashedPassword, hashPassword, signToken } from "../../utils";
 import { AppError } from "../../middlewares/globalErrorHandler";
 import type { QueryResult } from "pg";
@@ -47,7 +47,7 @@ const loginUserInDB = async (email: string, password: string) => {
         name: user.name,
         email: user.email,
         role: user.role
-    }
+    } as IJwtPayload
     const accessToken = signToken(jwtPayload)
 
     const { password: _, ...userWithoutPassword } = user

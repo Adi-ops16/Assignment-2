@@ -1,4 +1,5 @@
 import express, { type Application } from 'express'
+import cors from 'cors'
 const app: Application = express()
 import { StatusCodes } from 'http-status-codes'
 import { authRoute } from './modules/auth/auth.route'
@@ -6,6 +7,7 @@ import { globalErrorHandler } from './middlewares/globalErrorHandler'
 import { issueRoute } from './modules/issue/issues.route'
 
 app.use(express.json())
+app.use(cors())
 
 app.use("/api/auth", authRoute)
 app.use("/api/issues", issueRoute)
