@@ -8,7 +8,7 @@ const router = Router()
 router.post("/", auth(userRoles.CONTRIBUTOR, userRoles.MAINTAINER), postIssue)
 router.get("/", getAllIssues)
 router.get("/:id", getSingleIssue)
-router.put("/:id", auth(userRoles.CONTRIBUTOR, userRoles.MAINTAINER), updateIssue)
+router.patch("/:id", auth(userRoles.CONTRIBUTOR, userRoles.MAINTAINER), updateIssue)
 router.delete("/:id", auth(userRoles.MAINTAINER), deleteIssue)
 
 export const issueRoute = router
