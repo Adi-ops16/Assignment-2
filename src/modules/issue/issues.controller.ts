@@ -27,14 +27,14 @@ const getAllIssues = async (req: Request, res: Response) => {
 
     const result = await getAllIssuesFromDB(params)
 
-    sendResponse(res, StatusCodes.OK, true, "", result)
+    sendResponse(res, StatusCodes.OK, true, "Issue retrieved successfully", result)
 }
 
 const getSingleIssue = async (req: Request, res: Response) => {
     const { id } = req.params
     const result = await getSingleIssueFromDB(Number(id))
 
-    sendResponse(res, StatusCodes.OK, true, "", result)
+    sendResponse(res, StatusCodes.OK, true, "Issue retrieved successfully", result)
 }
 
 const updateIssue = async (req: Request, res: Response) => {
